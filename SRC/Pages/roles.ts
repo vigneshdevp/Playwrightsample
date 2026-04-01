@@ -48,7 +48,7 @@ export class RolesPage extends CommonPage {
         console.log(dupnum);
         await this.saveBtn.click()
         await expect(this.page.getByText('Cannot create role').first()).toBeVisible()
-        //await this.page.getByText('Cannot create role').waitFor({state:"detached"})
+        await this.page.getByText('Cannot create role').waitFor({state:"detached"})
 
       }
 
